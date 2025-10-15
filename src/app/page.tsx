@@ -1,4 +1,4 @@
-import { AuroraText } from "@/components/magicui/aurora-text";
+import BmiCardCom from "@/components/BmiCardCom";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,9 +10,7 @@ const page = () => {
 	return (
 		<>
 			<section className="grid h-[80dvh] place-items-center">
-				<AuroraText className="text-5xl font-bold">
-					Nextjs Starter Template
-				</AuroraText>
+				<BmiCardCom/>
 			</section>
 		</>
 	);
