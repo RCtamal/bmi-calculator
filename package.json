@@ -1,5 +1,5 @@
 {
-	"name": "nextjs-starter-template",
+	"name": "bmi-calculator",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
@@ -40,7 +40,7 @@
 		"sharp",
 		"unrs-resolver"
 	],
-	"author": "Saikat Sardar",
+	"author": "Tamal Roy Chowdhury",
 	"license": "MIT",
-	"homepage": "https://github.com/MrSaikatS/nextjs-starter-template"
+	"homepage": "https://github.com/RCtamal/bmi-calculator"
 }
