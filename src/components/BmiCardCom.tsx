@@ -1,5 +1,6 @@
 "use client";
 
+import BmiFormCom from "./BmiFormCom";
 import {
 	Card,
 	CardContent,
@@ -19,7 +20,9 @@ const BmiCardCom = () => {
 						For calculate your BMI, please submit the form.
 					</CardDescription>
 				</CardHeader>
-				<CardContent>Form</CardContent>
+				<CardContent>
+                    <BmiFormCom/>
+                </CardContent>
 				<CardFooter>
 					<p>your BMI is 80000</p>
 					<p>you are underweight</p>
