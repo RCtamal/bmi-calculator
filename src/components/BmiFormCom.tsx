@@ -1,4 +1,6 @@
-import { BmiFormData } from "@/lib/types";
+"use client";
+
+import { BmiFormDataType } from "@/lib/types";
 import { bmiFormSchema } from "@/lib/zodSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -14,12 +16,12 @@ import {
 import { Input } from "./shadcnui/input";
 
 const BmiFormCom = () => {
-	const cForm = useForm<BmiFormData>({
+	const cForm = useForm<BmiFormDataType>({
 		resolver: zodResolver(bmiFormSchema),
-		defaultValues: { weight: 50, height: 170 },
+		defaultValues: { weight: 0, height: 0 },
 	});
 
-	const cFormSubmit = (cData: BmiFormData) => {
+	const cFormSubmit = (cData: BmiFormDataType) => {
 		console.log(cData);
 	};
 
@@ -42,7 +44,7 @@ const BmiFormCom = () => {
 								<FormLabel>Weight</FormLabel>
 								<FormControl>
 									<Input
-										placeholder="Enter product Weight"
+										placeholder="Enter your Weight"
 										{...field}
 										value={field.value || ""}
 										onChange={(e) =>
@@ -66,7 +68,7 @@ const BmiFormCom = () => {
 								<FormControl>
 									<Input
 										type="number"
-										placeholder="Enter product Height"
+										placeholder="Enter your Height"
 										{...field}
 										value={field.value || ""}
 										onChange={(e) =>

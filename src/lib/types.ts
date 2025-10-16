@@ -6,4 +6,4 @@ export type RootLayoutProps = Readonly<{
 	children: ReactNode;
 }>;
 
-export type BmiFormData = z.infer<typeof bmiFormSchema>;
+export type BmiFormDataType = z.infer<typeof bmiFormSchema>;
