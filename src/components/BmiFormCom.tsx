@@ -15,18 +15,20 @@ import {
 } from "./shadcnui/form";
 import { Input } from "./shadcnui/input";
 
-const BmiFormCom = () => {
+
+const BmiFormCom = (onCalculate: any) => {
 	const cForm = useForm<BmiFormDataType>({
 		resolver: zodResolver(bmiFormSchema),
 		defaultValues: { weight: 0, height: 0 },
 	});
 
 	const cFormSubmit = (cData: BmiFormDataType) => {
-		console.log(cData);
+		onCalculate(cData);
 	};
 
 	const allClear = () => {
 		cForm.reset();
+		onCalculate.reset();
 	};
 
 	return (
@@ -41,7 +43,7 @@ const BmiFormCom = () => {
 						name="weight"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Weight</FormLabel>
+								<FormLabel>Weight (ibs)</FormLabel>
 								<FormControl>
 									<Input
 										placeholder="Enter your Weight"
@@ -64,7 +66,7 @@ const BmiFormCom = () => {
 						name="height"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Height</FormLabel>
+								<FormLabel>Height (in)</FormLabel>
 								<FormControl>
 									<Input
 										type="number"
